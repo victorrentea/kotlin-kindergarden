@@ -11,7 +11,8 @@ fun main(args : Array<String>) {
 
     val list2 = Arrays.asList(1,2,3)
     list2.stream()
-            .filter{ n -> n % 2 == 0 }
+//            .filter{ n -> n % 2 == 0 }
+            .filter{ it % 2 == 0 }
             .forEach(System.out::println);
 
     // final int n =2
@@ -85,12 +86,18 @@ fun iartamaDoamne() {
 //     ClasaDoarCuSetter().campVizibil = 1
 //     ClasaDoarCuSetter().campVizibil
     parseTree(Arrays.asList(4,5,6,1,2,3))
+    ClasaDoarCuGetterPeUnCamp().campPeBuneFinal
+    ClasaDoarCuGetterPeUnCamp().campVizibil
+
 }
-
-
 
 class ClasaDoarCuGetterPeUnCamp {
     private var camp:Int = 1
+
+
+    val campPeBuneFinal = 7
+
+    // asta NU e acelasi lucru cu final int campVizibil!
     val campVizibil
     get() = camp
 }
